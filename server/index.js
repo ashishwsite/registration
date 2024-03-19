@@ -9,7 +9,9 @@ const app=express()// intaillisde name of server
 app.use(cors())// cors help to connect app with frontend
 app.use(express.json())// frontent se data ko json me convert karega
 app.get("",(req,res)=>{
-res.json("successfull")
+// res.json("hellow")
+res.send("<h1>Hello backend of registration form</h1>")
+
 })
 
 app.get("/getUsers",(req,res)=>{
