@@ -5,13 +5,10 @@ const UserModel=require('./models/UserScema')
 // mongoose.connect("mongodb+srv://ashish:12345@cluster0.mongodb.net/<dbName>?retryWrites=true&w=majority&appName=Cluster0") // it automatically db and colliction which we define in vs code
 const port =1000
 const app=express()// intaillisde name of server
-app.use(cors(
-    {
-        origin:["https://registrationfrontend.vercel.app"],
-        methods:["POST","GET"],
-        credentials:true
-    }
-))
+app.use(cors({
+    origin: 'https://registrationfrontend.vercel.app'
+}));
+
 // app.use(cors())
 app.use(express.json())// frontent se data ko json me convert karega
 mongoose.connect("mongodb+srv://ashish:12345@cluster0.g45nrog.mongodb.net/dbYousafe?retryWrites=true&w=majority&appName=Cluster0")
