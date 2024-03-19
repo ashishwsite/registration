@@ -7,7 +7,7 @@ const port =1000
 const app=express()// intaillisde name of server
 app.use(cors(
     {
-        origin:["https://registrationserver.vercel.app/"],
+        origin:["https://registrationfrontend.vercel.app"],
         methods:["POSt","GET"],
         credentials:true
     }

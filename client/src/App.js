@@ -7,6 +7,7 @@ function App() {
   const [name, setname] = useState();
   const [pass, setpass] = useState();
   const [email, setemail] = useState();
+  axios.defaults.withCredentials=true
   function handlesubmit(e) {
     e.preventDefault()
     console.log("hanle cal")
