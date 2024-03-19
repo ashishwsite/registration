@@ -8,7 +8,7 @@ const app=express()// intaillisde name of server
 app.use(cors(
     {
         origin:["https://registrationfrontend.vercel.app"],
-        methods:["POSt","GET"],
+        methods:["POST","GET"],
         credentials:true
     }
 ))
