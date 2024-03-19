@@ -11,7 +11,7 @@ function App() {
     e.preventDefault()
     console.log("hanle cal")
     axios
-      .post("http://localhost:1000/createUser", { name, pass, email })
+      .post("https://registrationserver.vercel.app/createUser", { name, pass, email })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   }
