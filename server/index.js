@@ -15,7 +15,7 @@ const app=express()// intaillisde name of server
 app.use(cors())
 app.use(express.json())// frontent se data ko json me convert karega
 mongoose.connect("mongodb+srv://ashish:12345@cluster0.g45nrog.mongodb.net/dbYousafe?retryWrites=true&w=majority&appName=Cluster0")
-app.get("",(req,res)=>{
+app.get("/",(req,res)=>{
 res.json("hello")
 })
 app.get("/getUsers",(req,res)=>{
