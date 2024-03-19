@@ -6,7 +6,13 @@ mongoose.connect("mongodb+srv://ashish:12345@cluster0.g45nrog.mongodb.net/dbYous
 // mongoose.connect("mongodb+srv://ashish:12345@cluster0.mongodb.net/<dbName>?retryWrites=true&w=majority&appName=Cluster0") // it automatically db and colliction which we define in vs code
 const port =1000
 const app=express()// intaillisde name of server
-app.use(cors())// cors help to connect app with frontend
+app.use(cors(
+    {
+        origin:["https://registrationfrontend.vercel.app"],
+        methods:["POSt","GET"],
+        credentials:true
+    }
+))// cors help to connect app with frontend
 app.use(express.json())// frontent se data ko json me convert karega
 app.get("",(req,res)=>{
 // res.json("hellow")
